@@ -127,6 +127,46 @@
         </div>
       </div>
     </section>
+    <section class="artigos-sec">
+      <div class="artigos-wrap">
+        <div class="artigos-num">04</div>
+        <h2 class="artigos-titulo">Do laboratório ao artigo</h2>
+        <p class="artigos-sub">Pesquisa em materiais poliméricos que virou publicação.</p>
+
+        <div class="artigos-accordion" id="artigosAccordion">
+          <button class="artigos-header" id="artigosHeader" aria-expanded="false" aria-controls="artigosBody">
+            Artigos científicos <span class="artigos-count">(5)</span>
+            <span class="artigos-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 8L12 16L20 8" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </button>
+          <div class="artigos-body" id="artigosBody">
+            <a class="artigos-item" href="https://link.springer.com/article/10.1007/s13726-025-01474-2" target="_blank" rel="noopener">
+              <div class="artigos-item-titulo">Catalytic action of natural clay on polyolefins during reactive processing <span class="artigos-arrow">→</span></div>
+              <div class="artigos-item-meta"><span class="artigos-ano">2025</span>Iranian Polymer Journal, v.34, n.10, p.1721–1729 · Silva, E. F.; Luiz, D. S.; Andrade Jr., A. J.; Saron, C.</div>
+            </a>
+            <a class="artigos-item" href="https://link.springer.com/article/10.1007/s10163-022-01502-w" target="_blank" rel="noopener">
+              <div class="artigos-item-titulo">Catalytic effect of natural clays on properties and chemical structure of recycled polyethylene <span class="artigos-arrow">→</span></div>
+              <div class="artigos-item-meta"><span class="artigos-ano">2022</span>Journal of Material Cycles and Waste Management, v.24, n.6, p.2545–2554 · Luiz, D. S.; Saron, C.</div>
+            </a>
+            <a class="artigos-item" href="https://link.springer.com/article/10.1007/s10924-020-01883-9" target="_blank" rel="noopener">
+              <div class="artigos-item-titulo">Composites of Recycled Polypropylene from Cotton Swab Waste with Pyrolyzed Rice Husk <span class="artigos-arrow">→</span></div>
+              <div class="artigos-item-meta"><span class="artigos-ano">2021</span>Journal of Polymers and the Environment, v.29, n.1, p.350–362 · Pinzón Moreno, D. D.; Camargo, R. V.; Luiz, D. S.; Branco, L. T. P.; Grillo, C. C.; Saron, C.</div>
+            </a>
+            <a class="artigos-item" href="https://teses.usp.br/teses/disponiveis/97/97134/tde-28112019-162519/publico/EMD19005_C.pdf" target="_blank" rel="noopener">
+              <div class="artigos-item-titulo">Study of the catalytic activity of clays in the chemical modification of post-consumer polyethylene polymer waste Sugarcane Bagasse<span class="artigos-arrow">→</span></div>
+              <div class="artigos-item-meta"><span class="artigos-ano">2019</span>Mestrado - USP.</div>
+            </a>
+            <a class="artigos-item" href="" target="_blank" rel="noopener">
+              <div class="artigos-item-titulo">Obtaining Carbon Nanotubes from the Pyrolysis Process of Sugarcane Bagasse.<span class="artigos-arrow">→</span></div>
+              <div class="artigos-item-meta"><span class="artigos-ano">2017</span>Iniciação Ciêntífica - CNPq</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -158,5 +198,17 @@
   </footer>
 
 </body>
+<script>
+  (function () {
+    const acc = document.getElementById('artigosAccordion');
+    const header = document.getElementById('artigosHeader');
+    const body = document.getElementById('artigosBody');
+    header.addEventListener('click', () => {
+      const isOpen = acc.classList.toggle('artigos-open');
+      header.setAttribute('aria-expanded', isOpen);
+      body.style.maxHeight = isOpen ? body.scrollHeight + 'px' : '0';
+    });
+  })();
+</script>
 
 </html>
