@@ -73,7 +73,8 @@ p{margin:0;text-wrap:pretty}
 .item{display:flex;flex-direction:column;gap:4px}
 .item small{font:800 12px/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase}
 .card--dark .item small{color:var(--laranja)}
-.item span{font:700 18px/1.3 var(--font-body)}
+.item span {font:700 18px/1.3 var(--font-body)}
+.url {color: var(--font-body); text-decoration: underline }
 .card__foot{margin-top:auto;font-size:15px;line-height:1.45}
 
 /* hoje */
